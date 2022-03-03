@@ -1,22 +1,37 @@
 import java.util.*;
-
 public class ViewResult {
-	
-	
 	public static void main(String[] args) {
-		Result result = new Result("Java",1.5,50.0);
+		Scanner sc = new Scanner(System.in);
+		Result res = new Result();
 		
-		System.out.print("Course Name: ");
-		System.out.println(result.subject);
+		String courseName;
+		Double credits,marks;
 		
-		System.out.print("Course Credit Hours: ");
-		System.out.println(result.creditHour);
+		System.out.println("Enter subject name: ");
+//		courseName = sc.next();
+		res.subject = sc.next();
 		
-		System.out.print("Marks Obtained: ");
-		System.out.println(result.marks);
+		System.out.println("Enter credit hours: ");
+//		credits = sc.nextDouble();
+		res.creditHour = sc.nextDouble();
 		
-		System.out.print("Final Result: ");
-		System.out.println(result.getResult());
+		System.out.println("Enter obtained marks: ");
+//		marks = sc.nextDouble();
+		res.marks = sc.nextDouble();
+		
+//		Result r = new Result(courseName,credits,marks);
+		
+		System.out.print("Subject: ");
+		System.out.println(res.subject);
+		
+		System.out.print("Credit Hours: ");
+		System.out.println(res.creditHour);
+		
+		System.out.print("Marks obtained: ");
+		System.out.println(res.marks);
+		
+		System.out.print("Result: ");
+		System.out.println(res.getResult());
 
 	}
 
